@@ -1,5 +1,6 @@
 package org.system.pratice;
-
+import org.junit.Assert;
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -25,6 +26,7 @@ public class test {
 	driver.findElement(By.xpath("//*[@id=\"signinButton\"]")).click();
 	Thread.sleep(5000);
 	System.out.println("Title of the page is: " + driver.getTitle());
+	Assert.assertTrue("Page title is not correct",driver.getTitle().equals("sendpro"));
 	//driver.close();
 	
 	}
