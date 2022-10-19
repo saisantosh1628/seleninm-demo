@@ -9,10 +9,10 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class test {
-
+        @Test
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
-	WebDriverManager.chromedriver().setup();
+	WebDriverManager.chromedriver().setup("/usr/bin/google-chrome");
 	ChromeOptions options=new ChromeOptions();
 	options.setHeadless(true);
 	RemoteWebDriver driver=new ChromeDriver(options);
